@@ -17,12 +17,11 @@ const RUNTIME_CACHE = 'runtime-cache-v1';
 self.addEventListener('install', (e) => {
   // Pre cache all static assets.
   e.waitUntil(
-    caches
-      .open(STATIC_CACHE)
-      .then((cache) => cache.addAll(FILES_TO_CACHE))
-      // Tell the browser to activate this service worker immediately once it has finished installing.
-      .then(self.skipWaiting())
+    caches.open(STATIC_CACHE).then((cache) => cache.addAll(FILES_TO_CACHE))
+    // Tell the browser to activate this service worker immediately once it has finished installing.
+    // .then(self.skipWaiting())
   );
+  self.skipWaiting();
 });
 
 // The activate handler takes care of cleaning up old caches.

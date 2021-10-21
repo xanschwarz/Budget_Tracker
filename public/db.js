@@ -1,3 +1,5 @@
+// This file is for utilization of indexedDB.
+
 let db;
 
 // Create a new db request for a "BudgetDB" database.

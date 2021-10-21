@@ -1,12 +1,15 @@
 let db;
 
+// Create a new db request for a "BudgetDB" database.
 const request = indexedDB.open('BudgetDB', 1);
 
+// Create an object store New_Transaction with autoIncrement set to true.
 request.onupgradeneeded = (e) => {
   const db = e.target.result;
   db.createObjectStore('New_Transaction', { autoIncrement: true });
 };
 
+// Console log the error code, if one occurs.
 request.onerror = function (e) {
   console.log(`Slight problem. Error code: ${e.target.errorCode}`);
 };
@@ -15,7 +18,7 @@ function checkDatabase() {
   console.log('Check database invoked');
 
   // Open a transaction on your New_Transaction db
-  const transaction = db.transaction(['New_Transaction'], 'readwrite');
+  let transaction = db.transaction(['New_Transaction'], 'readwrite');
 
   // Access your New_Transaction object
   const store = transaction.objectStore('New_Transaction');

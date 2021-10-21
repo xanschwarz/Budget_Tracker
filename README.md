@@ -15,7 +15,7 @@ This project is a Budget Tracker that is able to function offline, and any offli
 
 ## Installation
 
-First you will need to fork, then clone, the repository to your local, and make sure you're ready to use Node.js, Mongo, and Mongoose. After doing so, open the integrated terminal in the Workout_Tracker directory and in the command line enter "npm i" or "npm install" to install the necessary dependancies. Now you can enter "npm start" to start the app. These commands and their terminal responses are shown below.<br><br>
+First you will need to fork, then clone, the repository to your local, and make sure you're ready to use Node.js, Mongo, and Mongoose. After doing so, open the integrated terminal in the Budget_Tracker directory and in the command line enter "npm i" or "npm install" to install the necessary dependancies. Now you can enter "npm start" to start the app. These commands and their terminal responses are shown below.<br><br>
 ![Picture of installation.](assets/images/install.JPG)
 
 ## Usage
